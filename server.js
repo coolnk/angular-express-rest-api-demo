@@ -18,11 +18,16 @@ var router = express.Router();
 
 //test the route to make sure evreything is going fine
 
-router.get('/', function(req,res){
-    res.json({message: 'Welcome!, this message comes from the api'});
+router.get('/message', function(req,res){
+    res.json({message: 'Welcome!, this message comes from the local api'});    
 });
 
 app.use('/api', router);
+
+//Alternate method
+app.get('/api/2',function(req,res){
+    res.json({message: 'Welcome!, this is the second message'});
+})
 
 app.get('*', function(req,res){
     res.sendFile('./public/index.html');

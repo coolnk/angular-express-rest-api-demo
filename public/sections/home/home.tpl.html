@@ -6,10 +6,12 @@
         <input type="text" class="form-control" ng-model="home.searchInput">
     </div>
    <h3>A list of users- filtered from the searchbox</h3>
+   <div>This list comes from external api, <a href="https://randomuser.me/api/"> https://randomuser.me/api/</a> </div>  
 <ul class="list-group">
     <li class="list-group-item" ng-repeat="user in home.users | filter: user.name.first"><span class="glyphicon glyphicon-star" ng-if="show.favorite"></span> {{user.name.first}} {{user.name.last}}<span class="badge">{{user.location.city}}</span></li>
 </ul>
-
-<div><h3>Testing directives</h3></di>
+<div><h3>A message from the local api</h3></div>
+<div>{{home.message}}</div>
+<div><h3>Testing directives</h3></div>
 <div standard-transclude><p>Some transcluded content.</p></div>
 <div overwrite-transclude><p>I don't want to show this..embarassing</p><p>It's okay I am done with the embarassment, the second part<p></div>

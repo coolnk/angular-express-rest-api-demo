@@ -3,5 +3,7 @@ angular.module('app.core').controller('HomeController',function(MyService){
     MyService.getUser().then(function(response){
         vm.users = response;
     });
-        
+    MyService.getLocalMessage().then(function(response){
+        vm.message = response;       
+    });
 });
