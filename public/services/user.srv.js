@@ -24,8 +24,8 @@ function userService($http, randomUserUrl, localMessageApiUrl) {
                 'Content-type':'application/json' 
                 },
             'cache':true
-        }).then(function(response){          
-            return response.data.message;
+        }).then(function(response){
+            return response.data;
         });
     }
     

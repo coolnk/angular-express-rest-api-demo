@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start":"node server.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nirjal Khadka",
@@ -12,6 +12,8 @@
   "dependencies": {
     "body-parser": "1.15.1",
     "express": "4.13.4",
-    "morgan": "1.7.0"
+    "jsonfile": "2.3.0",
+    "morgan": "1.7.0",
+    "serve-favicon": "2.3.0"
   }
 }

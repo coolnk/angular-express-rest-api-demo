@@ -1,6 +1,8 @@
 var express = require('express');
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
+var jsonFile = require('jsonfile');
+var favicon = require('serve-favicon');
 var app = express();
 var port = 7070;
 
@@ -12,21 +14,16 @@ app.use(bodyParser.urlencoded({'extended':'true'}));
 app.use(bodyParser.json());
 app.use(bodyParser.json({type:'applicatin/vnd.api+json'}));
 
+//Added favicon, this somehow solves the absolute path error, don't know why
+app.use(favicon(__dirname+'/favicon.ico'));
+
 // ROUTES FOR OUR API
 // =============================================================================
-var router = express.Router();
+//var router = express.Router();
+//app.use('/api', router);
 
-//test the route to make sure evreything is going fine
-
-router.get('/message', function(req,res){
-    res.json({message: 'Welcome!, this message comes from the local api'});    
-});
-
-app.use('/api', router);
-
-//Alternate method
-app.get('/api/2',function(req,res){
-    res.json({message: 'Welcome!, this is the second message'});
+app.get('/api/message',function(req,res){  
+    res.sendFile(__dirname+'/foo.json'); 
 })
 
 app.get('*', function(req,res){

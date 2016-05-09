@@ -1,0 +1,37 @@
+[
+	{
+		"color": "red",
+		"value": "#f00",
+         "favorite": true
+	},
+	{
+		"color": "green",
+		"value": "#0f0",
+        "favorite": false
+	},
+	{
+		"color": "blue",
+		"value": "#00f",
+        "favorite": true
+	},
+	{
+		"color": "cyan",
+		"value": "#0ff",
+        "favorite": false
+	},
+	{
+		"color": "magenta",
+		"value": "#f0f",
+        "favorite": false
+	},
+	{
+		"color": "yellow",
+		"value": "#ff0",
+        "favorite": false
+	},
+	{
+		"color": "black",
+		"value": "#000",
+        "favorite": false
+	}
+]
